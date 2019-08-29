@@ -39,20 +39,23 @@
 /* 点击按钮弹出的菜单 */
 
 .menu_dialog{
-  height: 540rpx;
   width: 100%;
   background-color: rgba(248, 248, 250, 1);
   position: absolute;
 }
 
 /* 可选择的选项 */
-.menu_options{
+.menu_knowledge_options{
   width: 100%;
   height: 440rpx;
 }
+.menu_hardness_options ,.menu_type_options{
+  width: 100%;
+  height: 112rpx;
+}
 
 /* 确定和重置按钮 */
-.menu_two_operations{
+.menu_two_operations,.menu_one_operation{
   height: 100rpx;
   width: 100%;
   background-color: #FFD500;
@@ -77,4 +80,12 @@
 /* TODO 边界没有限制 */
 .menu_two_operations .confirm .num_des{
   font-size: 13px;
+}
+
+.menu_one_operation{
+  line-height: 100rpx;
+  text-align: center;
+}
+.menu_one_operation view{
+    margin: 0 auto;
 }
