@@ -14,7 +14,7 @@ Page({
       id: 3,
       name: '类型'
     }],
-    select_menu_id:1,
+    select_menu_id:0,
   },
 
   /**
@@ -83,6 +83,12 @@ Page({
     
     this.setData({
       select_menu_id:selectedId
+    })
+  },
+  doConfirm:function(){
+    //TODO 点击确认后 应该对数据进行过滤
+    this.setData({
+      select_menu_id: 0
     })
   }
 })

@@ -1,12 +1,24 @@
-<view class='select_container'>
-  <view wx:for='{{menu_items}}' wx:key='{{item.id}}'
-   class="{{select_menu_id==item.id?'select_item':'select_item_un'}}" 
-   catchtap='onMenuSelected' data-id='{{item.id}}'
-   style='margin-left:{{item.id==1?30:44}}rpx'>
-    {{item.name}}</view>
-</view>
+<view class='header_container'>
+  <view class='select_container'>
+    <view wx:for='{{menu_items}}' wx:key='{{item.id}}' class="{{select_menu_id==item.id?'select_item':'select_item_un'}}" catchtap='onMenuSelected' data-id='{{item.id}}' style='margin-left:{{item.id==1?30:44}}rpx'>
+      {{item.name}}</view>
+  </view>
 
-<!-- 显示的菜单 -->
-<view class='menu_dialog'>
-  {{select_menu_id!=1 ?'select_item':'select_item_un'}}
+  <!-- 显示的菜单 -->
+  <view class='menu_dialog' style="display:{{select_menu_id==0?'none':'block'}}">
+    <!-- 可选择的选项 -->
+    <view class='menu_options'>
+      可选择的选项
+    </view>
+    <!-- 确定和取消按钮 -->
+    <view class='menu_two_operations'>
+        <view class='reset'>重置</view>
+        <view class='confirm' catchtap='doConfirm'>
+          <view>确认</view>
+          <view class='num_des'>（已筛选50道题）</view>
+        </view>
+        
+    </view>
+  </view>
 </view>
+<view>列表内容</view>
