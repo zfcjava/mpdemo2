@@ -1,16 +1,15 @@
-.header_container{
+.header_container {
   position: relative;
 }
 
-.select_container{
+.select_container {
   width: 100%;
   height: 110rpx;
   background-color: #fff;
   display: flex;
 }
 
-
-.select_item{
+.select_item {
   width: 200rpx;
   height: 76rpx;
   margin-top: 26rpx;
@@ -24,7 +23,7 @@
   font-weight: 700;
 }
 
-.select_item_un{
+.select_item_un {
   width: 200rpx;
   height: 60rpx;
   margin-top: 26rpx;
@@ -38,54 +37,77 @@
 
 /* 点击按钮弹出的菜单 */
 
-.menu_dialog{
+.menu_dialog {
   width: 100%;
   background-color: rgba(248, 248, 250, 1);
   position: absolute;
 }
 
 /* 可选择的选项 */
-.menu_knowledge_options{
+
+.menu_knowledge_options {
   width: 100%;
   height: 440rpx;
 }
-.menu_hardness_options ,.menu_type_options{
+
+.menu_hardness_options, .menu_type_options {
   width: 100%;
   height: 112rpx;
+  display: flex;
 }
 
 /* 确定和重置按钮 */
-.menu_two_operations,.menu_one_operation{
+
+.menu_two_operations, .menu_one_operation {
   height: 100rpx;
   width: 100%;
-  background-color: #FFD500;
+  background-color: #ffd500;
   display: flex;
   color: #222;
   font-size: 15px;
 }
 
-.menu_two_operations .reset{
+.menu_two_operations .reset {
   width: 50%;
   line-height: 100rpx;
   text-align: center;
-  background-color: #FFF;
+  background-color: #fff;
 }
 
-.menu_two_operations .confirm{
+.menu_two_operations .confirm {
   width: 50%;
-  margin: 10rpx auto; 
+  margin: 10rpx auto;
   text-align: center;
 }
 
 /* TODO 边界没有限制 */
-.menu_two_operations .confirm .num_des{
+
+.menu_two_operations .confirm .num_des {
   font-size: 13px;
 }
 
-.menu_one_operation{
+.menu_one_operation {
   line-height: 100rpx;
   text-align: center;
 }
-.menu_one_operation view{
-    margin: 0 auto;
+
+.menu_one_operation view {
+  margin: 0 auto;
+}
+
+.menu_pop, menu_pop_select {
+  width: 160rpx;
+  height: 52rpx;
+  background-color: #fff;
+  color: #222;
+  font-size: 13px;
+  margin: 34rpx 13rpx 26rpx 14rpx;
+  text-align: center;
+  border-radius: 26rpx;
+  line-height: 52rpx;
+}
+
+.menu_pop_select {
+  background-color: #565656;
+  color: #fff;
 }

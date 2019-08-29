@@ -11,10 +11,14 @@
       知识点
     </view>
     <view class='menu_hardness_options' wx:elif='{{select_menu_id==2}}'>
-      难度
+      <view wx:for='{{menu_items[select_menu_id-1].levels}}' wx:key='{{item.id}}' class="menu_pop {{item.id==hard_select_id?'menu_pop_select':''}}" catchtap='onHardMenuSelected' data-id='{{item.id}}'>
+        {{item.title}}
+      </view>
     </view>
     <view class='menu_type_options' wx:elif='{{select_menu_id==3}}'>
-      类型
+      <view wx:for='{{menu_items[select_menu_id-1].levels}}' wx:key='{{item.id}}' class="menu_pop {{item.id==type_select_id?'menu_pop_select':''}}" catchtap='onTypeMenuSelected' data-id='{{item.id}}'>
+        {{item.title}}
+      </view>
     </view>
     <!-- 确定和取消按钮 -->
     <view class='menu_two_operations' wx:if='{{select_menu_id==1}}'>
