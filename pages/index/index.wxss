@@ -1,0 +1,42 @@
+.select_container{
+  width: 100%;
+  height: 110rpx;
+  background-color: #fff;
+  display: flex;
+}
+
+
+.select_item{
+  width: 200rpx;
+  height: 76rpx;
+  margin-top: 26rpx;
+  text-align: center;
+  background-color: rgba(248, 248, 250, 1);
+  padding-top: 8rpx;
+  border-top-right-radius: 30rpx;
+  border-top-left-radius: 30rpx;
+  font-size: 15px;
+  color: #222;
+  font-weight: 700;
+}
+
+.select_item_un{
+  width: 200rpx;
+  height: 60rpx;
+  margin-top: 26rpx;
+  text-align: center;
+  line-height: 60rpx;
+  background-color: rgba(248, 248, 250, 1);
+  border-radius: 30rpx;
+  font-size: 15px;
+  color: #222;
+}
+
+/* 点击按钮弹出的菜单 */
+
+.menu_dialog{
+  height: 540rpx;
+  width: 100%;
+  background-color: rgba(248, 248, 250, 1);
+}
+

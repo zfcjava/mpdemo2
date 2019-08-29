@@ -1,0 +1,12 @@
+<view class='select_container'>
+  <view wx:for='{{menu_items}}' wx:key='{{item.id}}'
+   class="{{select_menu_id==item.id?'select_item':'select_item_un'}}" 
+   catchtap='onMenuSelected' data-id='{{item.id}}'
+   style='margin-left:{{item.id==1?30:44}}rpx'>
+    {{item.name}}</view>
+</view>
+
+<!-- 显示的菜单 -->
+<view class='menu_dialog'>
+  {{select_menu_id!=1 ?'select_item':'select_item_un'}}
+</view>
