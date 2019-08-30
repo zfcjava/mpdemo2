@@ -243,5 +243,27 @@ Page({
       type_select_id: selectedId
     })
 
+  },
+  knowledge_select_changed: function(event) {
+    var level = event.target.dataset.level;
+    var id = event.target.dataset.selectid;
+    console.log(event)
+    if (level == 1) {
+      this.setData({
+        knowledge_select_level1_id: id,
+        knowledge_select_level2_id: 1,
+        knowledge_select_level3_id: 1
+      });
+    } else if (level == 2) {
+      this.setData({
+        knowledge_select_level2_id: id,
+        knowledge_select_level3_id: 1
+      });
+    } else if (level == 3) {
+      this.setData({
+        knowledge_select_level3_id: id
+      });
+    }
+
   }
 })
