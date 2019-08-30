@@ -1,3 +1,16 @@
+<view class='subject_container'>
+  <view style='display:flex;justify-content: space-between;'  wx:for="{{subjects}}" wx:key='subject_id'>
+    <view wx:if='{{item.subject_id==subject_id_select}}'class='subject_item_select'  >
+      <view>
+        {{item.name}}
+      </view>
+      <view class='subject_bottom_flag'></view>
+    </view>
+    <view wx:elif='{{item.subject_id!=subject_id_select}}' class='subject_item' catchtap='subject_select_changed' data-subject_id_select='{{item.subject_id}}'>
+      {{item.name}}
+    </view>
+  </view>
+</view>
 <view class='header_container'>
   <view class='select_container'>
     <view wx:for='{{menu_items}}' wx:key='{{item.id}}' class="{{select_menu_id==item.id?'select_item':'select_item_un'}}" catchtap='onMenuSelected' data-id='{{item.id}}' style='margin-left:{{item.id==1?30:44}}rpx'>
@@ -10,31 +23,28 @@
     <view class='menu_knowledge_options' wx:if='{{select_menu_id==1}}'>
       <!-- 知识点的可选性 -->
       <view class='knowledge_level1 right_divider knowledge_level'>
-        <view wx:for='{{menu_items[select_menu_id-1].level_1_items}}' wx:key='{{item.k_1_id}}' class="menu_item_container  right_arrow{{(knowledge_select_level1_id==item.k_1_id)?'_select':''}}" >
-        
-        <view class="level_font {{(knowledge_select_level1_id==item.k_1_id)?'level_font_select':''}}" catchtap='knowledge_select_changed' data-level='1' data-selectid='{{item.k_1_id}}'>
-         {{item.name}}
-        </view>
-       
-        
+        <view wx:for='{{menu_items[select_menu_id-1].level_1_items}}' wx:key='{{item.k_1_id}}' class="menu_item_container  right_arrow{{(knowledge_select_level1_id==item.k_1_id)?'_select':''}}">
+
+          <view class="level_font {{(knowledge_select_level1_id==item.k_1_id)?'level_font_select':''}}" catchtap='knowledge_select_changed' data-level='1' data-selectid='{{item.k_1_id}}'>
+            {{item.name}}
+          </view>
+
+
         </view>
       </view>
       <view class='knowledge_level2 right_divider knowledge_level'>
-        <view wx:for='{{menu_items[select_menu_id-1].level_1_items[knowledge_select_level1_id-1].level_2_items}}' wx:key='{{item.k_2_id}}' class="menu_item_container right_arrow{{(knowledge_select_level2_id==item.k_2_id)?'_select':''}}"
-          >
+        <view wx:for='{{menu_items[select_menu_id-1].level_1_items[knowledge_select_level1_id-1].level_2_items}}' wx:key='{{item.k_2_id}}' class="menu_item_container right_arrow{{(knowledge_select_level2_id==item.k_2_id)?'_select':''}}">
           <view class="level_font {{(knowledge_select_level2_id==item.k_2_id)?'level_font_select':''}}" style='width:132rpx' catchtap='knowledge_select_changed' data-level='2' data-selectid='{{item.k_2_id}} '>
-          {{item.name}}
+            {{item.name}}
           </view>
-          </view>
+        </view>
       </view>
       <view class="knowledge_level2">
-        <view wx:for='{{menu_items[select_menu_id-1].level_1_items[knowledge_select_level1_id-1].level_2_items[knowledge_select_level2_id-1].level_3_items}}' wx:key='{{item.k_3_id}}' class="menu_item_container"
-          >
-            <view class="level_font  {{(knowledge_select_level3_id==item.k_3_id)?' level_font_select':''}}"
-          style='width:132rpx' catchtap='knowledge_select_changed' data-level='3' data-selectid='{{item.k_3_id}}'> 
-               {{item.name}} 
-            </view>
+        <view wx:for='{{menu_items[select_menu_id-1].level_1_items[knowledge_select_level1_id-1].level_2_items[knowledge_select_level2_id-1].level_3_items}}' wx:key='{{item.k_3_id}}' class="menu_item_container">
+          <view class="level_font  {{(knowledge_select_level3_id==item.k_3_id)?' level_font_select':''}}" style='width:132rpx' catchtap='knowledge_select_changed' data-level='3' data-selectid='{{item.k_3_id}}'>
+            {{item.name}}
           </view>
+        </view>
       </view>
     </view>
     <view class='menu_hardness_options' wx:elif='{{select_menu_id==2}}'>
@@ -60,4 +70,9 @@
     </view>
   </view>
 </view>
-<view>列表内容</view>
+
+<view wx:if='{{subject_id_select==1}}' style='color:white;background-color: red;height:3500rpx;'>{{page_contents[subject_id_select-1]}}</view>
+
+<view wx:elif='{{subject_id_select==2}}' style='color:white;background-color:blue; height:3500rpx;'>{{page_contents[subject_id_select-1]}}</view>
+<view wx:elif='{{subject_id_select==3}}' style='color:white;background-color:green; height:3500rpx;'>{{page_contents[subject_id_select-1]}}</view>
+<view wx:elif='{{subject_id_select==4}}' style='color:white;background-color:purple; height:3500rpx;'>{{page_contents[subject_id_select-1]}}</view>

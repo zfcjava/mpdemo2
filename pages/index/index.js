@@ -4,6 +4,8 @@ Page({
    * 页面的初始数据
    */
   data: {
+    subjects: [{ subject_id: 1, name: '数学' }, { subject_id: 2, name: '语文' }, { subject_id: 3, name: '物理' }, { subject_id: 4, name: '化学' }],
+    subject_id_select:1,
     menu_items: [{
       id: 1,
       name: '知识点',
@@ -139,7 +141,10 @@ Page({
     type_select_id: 1,
     knowledge_select_level1_id: 1,
     knowledge_select_level2_id: 1,
-    knowledge_select_level3_id: 1
+    knowledge_select_level3_id: 1,
+    page_contents:[
+      "数学页面","语文页面","物理页面","化学页面"
+    ]
   },
 
   /**
@@ -265,5 +270,11 @@ Page({
       });
     }
 
+  },
+  subject_select_changed:function(event){
+    var new_subject_id = event.target.dataset.subject_id_select;
+    this.setData({
+      subject_id_select: new_subject_id
+    });
   }
 })

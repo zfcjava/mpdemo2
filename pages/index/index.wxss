@@ -1,3 +1,49 @@
+
+/* 科目类型 */
+.subject_container{
+  width: 100%;
+  height: 74rpx;
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  padding-top: 14rpx;
+}
+/*
+ TODO  注意标题之间的margin 是根据计算得来
+ 计算方式 margin_value = （(375/标题数目）-减去标题宽度）/2
+ */
+.subject_item{
+  color: rgba(84, 84, 84,0.5);
+  font-size: 15px;
+  width: 85rpx;
+  height:42rpx;
+  margin-top: 10rpx;
+  margin-left: 51rpx;
+  margin-right: 51rpx;
+}
+
+.subject_item_select{
+  color: #222;
+  font-size: 20px;
+  width: 85rpx;
+  height: 100%;
+  font-weight: 700;
+  position: relative;
+  margin-left: 51rpx;
+  margin-right: 51rpx;
+}
+
+.subject_bottom_flag{
+  position: absolute;
+  width: 40rpx;
+  height: 6rpx;
+  background-color: #222;
+  bottom: 0rpx;
+  left: 20rpx;
+}
+
+
+/* 选择功能 */
 .header_container {
   position: relative;
 }
@@ -32,7 +78,7 @@
   background-color: rgba(248, 248, 250, 1);
   border-radius: 30rpx;
   font-size: 15px;
-  color: #222;
+  color: rgba(84, 84, 84,0.5);
 }
 
 /* 点击按钮弹出的菜单 */
