@@ -51,31 +51,31 @@
   display: flex;
 }
 
-.knowledge_level{
+.knowledge_level {
   display: flex;
   flex-direction: column;
 }
 
-.knowledge_level1{
+.knowledge_level1 {
   width: 208rpx;
   height: 100%;
 }
 
-.knowledge_level2{
+.knowledge_level2 {
   width: 252rpx;
   height: 100%;
 }
 
-.knowledge_level3{
+.knowledge_level3 {
   width: 290rpx;
   height: 100%;
 }
 
-.right_divider{
+.right_divider {
   position: relative;
 }
 
-.right_divider::after{
+.right_divider::after {
   content: '';
   width: 2rpx;
   height: 100%;
@@ -85,8 +85,7 @@
   top: 0;
 }
 
-
-.level_font,.level_font_select{
+.level_font, .level_font_select {
   margin-left: 50rpx;
   margin-top: 36rpx;
   color: #222;
@@ -94,15 +93,16 @@
   width: 78rpx;
   height: 36rpx;
 }
-.level_font_select{
-   color: #3AA3FF;
+
+.level_font_select {
+  color: #3aa3ff;
 }
 
-.right_arrow{
+.right_arrow {
   position: relative;
 }
 
-.right_arrow::after{
+.right_arrow::after {
   content: '';
   width: 10rpx;
   height: 10rpx;
@@ -114,16 +114,16 @@
   transform: rotate(45deg);
 }
 
-.right_arrow_select{
+.right_arrow_select {
   position: relative;
 }
 
-.right_arrow_select::after{
+.right_arrow_select::after {
   content: '';
   width: 10rpx;
   height: 10rpx;
-  border-top: 1rpx solid #3AA3FF;
-  border-right: 1rpx solid #3AA3FF;
+  border-top: 1rpx solid #3aa3ff;
+  border-right: 1rpx solid #3aa3ff;
   position: absolute;
   right: -20rpx;
   top: 12rpx;

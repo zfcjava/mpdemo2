@@ -21,8 +21,7 @@ Page({
           }, {
             k_2_id: 2,
             name: '牛顿经典力学',
-            level_3_items:[
-              {
+            level_3_items: [{
                 k_3_id: 1,
                 name: '牛1'
               },
@@ -35,24 +34,23 @@ Page({
                 name: '牛3'
               }
             ]
-            }, {
-              k_2_id: 3,
-              name: '热力',
-              level_3_items: [
-                {
-                  k_3_id: 1,
-                  name: '热1'
-                },
-                {
-                  k_3_id: 2,
-                  name: '热2'
-                },
-                {
-                  k_3_id: 3,
-                  name: '热3'
-                }
-              ]
-            }]
+          }, {
+            k_2_id: 3,
+            name: '热力',
+            level_3_items: [{
+                k_3_id: 1,
+                name: '热1'
+              },
+              {
+                k_3_id: 2,
+                name: '热2'
+              },
+              {
+                k_3_id: 3,
+                name: '热3'
+              }
+            ]
+          }]
         }, {
           k_1_id: 3,
           name: '磁学',
@@ -62,8 +60,7 @@ Page({
           }, {
             k_2_id: 2,
             name: '碰瓷',
-            level_3_items: [
-              {
+            level_3_items: [{
                 k_3_id: 1,
                 name: '哈登'
               },
@@ -79,8 +76,7 @@ Page({
           }, {
             k_2_id: 3,
             name: '四大分位',
-            level_3_items: [
-              {
+            level_3_items: [{
                 k_3_id: 1,
                 name: 'UFO'
               },
@@ -141,7 +137,7 @@ Page({
     select_menu_id: 1,
     hard_select_id: 1,
     type_select_id: 1,
-    knowledge_select_level1_id:1,
+    knowledge_select_level1_id: 1,
     knowledge_select_level2_id: 1,
     knowledge_select_level3_id: 1
   },
