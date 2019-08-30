@@ -4,7 +4,7 @@
 
 .select_container {
   width: 100%;
-  height: 110rpx;
+  height: 108rpx;
   background-color: #fff;
   display: flex;
 }
@@ -86,18 +86,24 @@
 }
 
 .level_font, .level_font_select {
-  margin-left: 50rpx;
-  margin-top: 36rpx;
   color: #222;
   font-size: 13px;
   width: 78rpx;
-  height: 36rpx;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .level_font_select {
   color: #3aa3ff;
 }
 
+.menu_item_container{
+  margin-left: 50rpx;
+  margin-top: 36rpx;
+  width: 100%;
+  height: 36rpx;
+}
 .right_arrow {
   position: relative;
 }
@@ -109,7 +115,7 @@
   border-top: 1rpx solid #222;
   border-right: 1rpx solid #222;
   position: absolute;
-  right: -20rpx;
+  right: 106rpx;
   top: 12rpx;
   transform: rotate(45deg);
 }
@@ -125,7 +131,7 @@
   border-top: 1rpx solid #3aa3ff;
   border-right: 1rpx solid #3aa3ff;
   position: absolute;
-  right: -20rpx;
+  right: 106rpx;
   top: 12rpx;
   transform: rotate(45deg);
 }

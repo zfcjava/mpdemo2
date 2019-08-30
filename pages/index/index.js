@@ -134,7 +134,7 @@ Page({
         },
       ]
     }],
-    select_menu_id: 1,
+    select_menu_id: 0,
     hard_select_id: 1,
     type_select_id: 1,
     knowledge_select_level1_id: 1,

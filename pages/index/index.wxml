@@ -10,15 +10,31 @@
     <view class='menu_knowledge_options' wx:if='{{select_menu_id==1}}'>
       <!-- 知识点的可选性 -->
       <view class='knowledge_level1 right_divider knowledge_level'>
-        <view wx:for='{{menu_items[select_menu_id-1].level_1_items}}' wx:key='{{item.k_1_id}}' class="level_font  right_arrow{{(knowledge_select_level1_id==item.k_1_id)?'_select level_font_select':''}}" catchtap='knowledge_select_changed' data-level='1' data-selectid='{{item.k_1_id}}'>{{item.name}}</view>
+        <view wx:for='{{menu_items[select_menu_id-1].level_1_items}}' wx:key='{{item.k_1_id}}' class="menu_item_container  right_arrow{{(knowledge_select_level1_id==item.k_1_id)?'_select':''}}" >
+        
+        <view class="level_font {{(knowledge_select_level1_id==item.k_1_id)?'level_font_select':''}}" catchtap='knowledge_select_changed' data-level='1' data-selectid='{{item.k_1_id}}'>
+         {{item.name}}
+        </view>
+       
+        
+        </view>
       </view>
       <view class='knowledge_level2 right_divider knowledge_level'>
-        <view wx:for='{{menu_items[select_menu_id-1].level_1_items[knowledge_select_level1_id-1].level_2_items}}' wx:key='{{item.k_2_id}}' class="level_font  right_arrow{{(knowledge_select_level2_id==item.k_2_id)?'_select level_font_select':''}}" style='width:104rpx'
-          catchtap='knowledge_select_changed' data-level='2' data-selectid='{{item.k_2_id}} '>{{item.name}}</view>
+        <view wx:for='{{menu_items[select_menu_id-1].level_1_items[knowledge_select_level1_id-1].level_2_items}}' wx:key='{{item.k_2_id}}' class="menu_item_container right_arrow{{(knowledge_select_level2_id==item.k_2_id)?'_select':''}}"
+          >
+          <view class="level_font {{(knowledge_select_level2_id==item.k_2_id)?'level_font_select':''}}" style='width:132rpx' catchtap='knowledge_select_changed' data-level='2' data-selectid='{{item.k_2_id}} '>
+          {{item.name}}
+          </view>
+          </view>
       </view>
       <view class="knowledge_level2">
-        <view wx:for='{{menu_items[select_menu_id-1].level_1_items[knowledge_select_level1_id-1].level_2_items[knowledge_select_level2_id-1].level_3_items}}' wx:key='{{item.k_3_id}}' class="level_font  {{(knowledge_select_level3_id==item.k_3_id)?' level_font_select':''}}"
-          style='width:124rpx' catchtap='knowledge_select_changed' data-level='3' data-selectid='{{item.k_3_id}}'>{{item.name}}</view>
+        <view wx:for='{{menu_items[select_menu_id-1].level_1_items[knowledge_select_level1_id-1].level_2_items[knowledge_select_level2_id-1].level_3_items}}' wx:key='{{item.k_3_id}}' class="menu_item_container"
+          >
+            <view class="level_font  {{(knowledge_select_level3_id==item.k_3_id)?' level_font_select':''}}"
+          style='width:132rpx' catchtap='knowledge_select_changed' data-level='3' data-selectid='{{item.k_3_id}}'> 
+               {{item.name}} 
+            </view>
+          </view>
       </view>
     </view>
     <view class='menu_hardness_options' wx:elif='{{select_menu_id==2}}'>
